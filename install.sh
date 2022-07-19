@@ -147,7 +147,7 @@ EOL
 a2ensite $SITE
 service apache2 restart
 
-apt install zip unzip php-zip
+sudo apt install zip unzip php-zip
 
 composer create-project athlon1600/php-proxy-app:dev-master /var/www/ --no-interaction
 
