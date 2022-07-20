@@ -167,11 +167,11 @@ function library:CreateWindow(WName)
 				y = y + (v.AbsoluteSize.Y) + 2
 			end
 		end
-		Container.Size = UDim2.new(0, 200, 0, y +2)
+		Container.Size = UDim2.new(0, 200, 0, y+2)
 	end
 	
 	function ui:Desize()
-		Container.Size = UDim2.new(0, 200, 0, y -2)
+		Container.Size = UDim2.new(0, 200, 0, y-2)
 	end
 
 	function ui:Button(Name,callback)
