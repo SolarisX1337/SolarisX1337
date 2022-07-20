@@ -158,7 +158,7 @@ function library:CreateWindow(WName)
 
 		Container:TweenSize(targetSize, targetDirection, "Linear", 0.15, true)
 	end)
-	
+
 	function ui:Resize()
 		local y = 37
 		for i, v in pairs(Container:GetChildren()) do
@@ -170,7 +170,7 @@ function library:CreateWindow(WName)
 	end
 	
 	function ui:Desize()
-		Container.Size = UDim2.new(0, 200, 0, -2)
+		Container.Size = UDim2.new(0, 200, 0, y+2)
 	end
 
 	function ui:Button(Name,callback)
@@ -477,7 +477,7 @@ function library:CreateWindow(WName)
 		
 		Container[Name]:Destroy()
 		
-		ui:Desize()
+		ui:Resize()
 		
 	end
 
