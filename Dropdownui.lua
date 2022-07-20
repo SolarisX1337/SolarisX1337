@@ -169,10 +169,6 @@ function library:CreateWindow(WName)
 		Container.Size = UDim2.new(0, 200, 0, y+2)
 	end
 	
-	function ui:Desize()
-		Container.Size = UDim2.new(0, 200, 0, y+2)
-	end
-
 	function ui:Button(Name,callback)
 		local ButtonHolder = Instance.new("Frame")
 		local Button = Instance.new("TextButton")
