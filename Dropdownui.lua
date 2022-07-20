@@ -17,7 +17,6 @@ end)
 
 
 function library:CreateWindow(WName)
-	
 	library.count = library.count + 1
 	local ui = {};
 	local Holder = Instance.new("ImageLabel")
@@ -168,7 +167,7 @@ function library:CreateWindow(WName)
 		end
 		Container.Size = UDim2.new(0, 200, 0, y+2)
 	end
-	
+
 	function ui:Button(Name,callback)
 		local ButtonHolder = Instance.new("Frame")
 		local Button = Instance.new("TextButton")
@@ -468,17 +467,8 @@ function library:CreateWindow(WName)
 		end)
 		ui:Resize()
 	end
-	
-	function ui:Delete(Name)
-		
-		Container[Name]:Destroy()
-		
-		ui:Resize()
-		
-	end
 
 	function ui:Toggle(Name,callback)
-		
 		local Enabled = false;
 
 		local ToggleHolder = Instance.new("Frame")
@@ -486,7 +476,7 @@ function library:CreateWindow(WName)
 		local MainToggle = Instance.new("ImageButton")
 		local ToggleText = Instance.new("TextLabel")
 
-		ToggleHolder.Name = Name
+		ToggleHolder.Name = "ToggleHolder"
 		ToggleHolder.Parent = Container
 		ToggleHolder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		ToggleHolder.BackgroundTransparency = 1.000
