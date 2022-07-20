@@ -159,9 +159,8 @@ function library:CreateWindow(WName)
 		Container:TweenSize(targetSize, targetDirection, "Linear", 0.15, true)
 	end)
 	
-	local y = 37
-	
 	function ui:Resize()
+		local y = 37
 		for i, v in pairs(Container:GetChildren()) do
 			if not v:IsA("UIPadding") and not v:IsA("UIListLayout") then
 				y = y + (v.AbsoluteSize.Y) + 2
@@ -171,7 +170,7 @@ function library:CreateWindow(WName)
 	end
 	
 	function ui:Desize()
-		Container.Size = UDim2.new(0, 200, 0, y-2)
+		Container.Size = UDim2.new(0, 200, 0, -2)
 	end
 
 	function ui:Button(Name,callback)
