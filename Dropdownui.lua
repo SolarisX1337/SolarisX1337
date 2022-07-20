@@ -473,6 +473,8 @@ function library:CreateWindow(WName)
 		
 		Container[Name]:Destroy()
 		
+		ui:Resize()
+		
 	end
 
 	function ui:Toggle(Name,callback)
