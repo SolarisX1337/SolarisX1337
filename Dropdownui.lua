@@ -467,6 +467,14 @@ function library:CreateWindow(WName)
 		end)
 		ui:Resize()
 	end
+	
+	function ui:Delete(Name)
+		
+		Container[Name]:Destroy()
+		
+		ui:Resize()
+		
+	end
 
 	function ui:Toggle(Name,callback)
 		local Enabled = false;
@@ -476,7 +484,7 @@ function library:CreateWindow(WName)
 		local MainToggle = Instance.new("ImageButton")
 		local ToggleText = Instance.new("TextLabel")
 
-		ToggleHolder.Name = "ToggleHolder"
+		ToggleHolder.Name = Name
 		ToggleHolder.Parent = Container
 		ToggleHolder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		ToggleHolder.BackgroundTransparency = 1.000
