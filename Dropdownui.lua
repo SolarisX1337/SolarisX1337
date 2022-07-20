@@ -473,6 +473,8 @@ function library:CreateWindow(WName)
 		
 		Container[Name]:Destroy()
 		
+		wait(0.5)
+		
 		ui:Resize()
 		
 	end
