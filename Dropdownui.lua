@@ -163,6 +163,16 @@ function library:CreateWindow(WName)
 		local y = 37
 		for i, v in pairs(Container:GetChildren()) do
 			if not v:IsA("UIPadding") and not v:IsA("UIListLayout") then
+				y = y + (v.AbsoluteSize.Y) - 2
+			end
+		end
+		Container.Size = UDim2.new(0, 200, 0, y-2)
+	end
+	
+	function ui:Desize()
+		local y = 37
+		for i, v in pairs(Container:GetChildren()) do
+			if not v:IsA("UIPadding") and not v:IsA("UIListLayout") then
 				y = y + (v.AbsoluteSize.Y) + 2
 			end
 		end
@@ -473,9 +483,7 @@ function library:CreateWindow(WName)
 		
 		Container[Name]:Destroy()
 		
-		wait(0.5)
-		
-		ui:Resize()
+		ui:Desize()
 		
 	end
 
