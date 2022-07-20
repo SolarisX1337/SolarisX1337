@@ -17,6 +17,7 @@ end)
 
 
 function library:CreateWindow(WName)
+	
 	library.count = library.count + 1
 	local ui = {};
 	local Holder = Instance.new("ImageLabel")
@@ -477,6 +478,7 @@ function library:CreateWindow(WName)
 	end
 
 	function ui:Toggle(Name,callback)
+		
 		local Enabled = false;
 
 		local ToggleHolder = Instance.new("Frame")
